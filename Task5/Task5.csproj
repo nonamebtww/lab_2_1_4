@@ -5,14 +5,14 @@
     <PropertyGroup>
         <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
         <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-        <ProjectGuid>{D2E7CCAB-698F-449C-88E9-7939F6480CCA}</ProjectGuid>
-        <OutputType>Exe</OutputType>
+        <ProjectGuid>{4628EC33-307F-455D-8567-45C0FC4E93AC}</ProjectGuid>
+        <OutputType>Library</OutputType>
         <AppDesignerFolder>Properties</AppDesignerFolder>
-        <RootNamespace>Console</RootNamespace>
-        <AssemblyName>Console</AssemblyName>
+        <RootNamespace>Task5</RootNamespace>
+        <AssemblyName>Task5</AssemblyName>
         <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
         <FileAlignment>512</FileAlignment>
-        <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+        <LangVersion>8.0</LangVersion>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
         <PlatformTarget>AnyCPU</PlatformTarget>
@@ -40,26 +40,8 @@
         <Reference Include="System.Xml"/>
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="Program.cs"/>
+        <Compile Include="Functions.cs" />
         <Compile Include="Properties\AssemblyInfo.cs"/>
-    </ItemGroup>
-    <ItemGroup>
-      <ProjectReference Include="..\Task1\Task1.csproj">
-        <Project>{ce8e6e6d-273c-415c-9a87-d15ce6025239}</Project>
-        <Name>Task1</Name>
-      </ProjectReference>
-      <ProjectReference Include="..\Task2\Task2.csproj">
-        <Project>{6f3e5673-37f2-4f0f-9989-43bc5f115eb9}</Project>
-        <Name>Task2</Name>
-      </ProjectReference>
-      <ProjectReference Include="..\Task3\Task3.csproj">
-        <Project>{c66ee98a-2670-4563-9220-33c198192f41}</Project>
-        <Name>Task3</Name>
-      </ProjectReference>
-      <ProjectReference Include="..\Task4\Task4.csproj">
-        <Project>{bc508231-2658-492f-9a31-ce0b9ee0b85f}</Project>
-        <Name>Task4</Name>
-      </ProjectReference>
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
