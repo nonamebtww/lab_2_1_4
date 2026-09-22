@@ -1,4 +1,3 @@
-#nullable enable
 using System.Text;
 
 namespace Task5 {
@@ -32,7 +31,7 @@ public class Functions {
     };
   }
 
-  public static string? ShowArray(string[][] arr) {
+  public static string ShowArray(string[][] arr) {
     if (arr.Length != 3 || arr[0].Length != 4 || arr[1].Length != 3 || arr[2].Length != 5) {
       return null;
     }

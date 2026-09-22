@@ -33,7 +33,7 @@ public partial class Main : Form {
 
     var result = Functions.ShowArray(_objects);
 
-    if (result == null) {
+    if (string.IsNullOrEmpty(result)) {
       MessageBox.Show("Введены неверные значения!");
       return;
     }
