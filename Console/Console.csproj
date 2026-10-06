@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props"
-            Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')"/>
+    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')"/>
     <PropertyGroup>
         <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
         <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -44,30 +43,29 @@
         <Compile Include="Properties\AssemblyInfo.cs"/>
     </ItemGroup>
     <ItemGroup>
-      <ProjectReference Include="..\Task1\Task1.csproj">
-        <Project>{ce8e6e6d-273c-415c-9a87-d15ce6025239}</Project>
-        <Name>Task1</Name>
-      </ProjectReference>
-      <ProjectReference Include="..\Task2\Task2.csproj">
-        <Project>{6f3e5673-37f2-4f0f-9989-43bc5f115eb9}</Project>
-        <Name>Task2</Name>
-      </ProjectReference>
-      <ProjectReference Include="..\Task3\Task3.csproj">
-        <Project>{c66ee98a-2670-4563-9220-33c198192f41}</Project>
-        <Name>Task3</Name>
-      </ProjectReference>
-      <ProjectReference Include="..\Task4\Task4.csproj">
-        <Project>{bc508231-2658-492f-9a31-ce0b9ee0b85f}</Project>
-        <Name>Task4</Name>
-      </ProjectReference>
+        <ProjectReference Include="..\Task1Console\Task1Console.csproj">
+            <Project>{25168d05-3e37-4a78-84d0-523f6fd1b60d}</Project>
+            <Name>Task1Console</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\Task2Console\Task2Console.csproj">
+            <Project>{b5ead96e-fa1f-4726-b5a1-fb3dc979fe8f}</Project>
+            <Name>Task2Console</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\Task3Console\Task3Console.csproj">
+            <Project>{9cdd3ed9-1d56-4f80-8544-9d690358cdad}</Project>
+            <Name>Task3Console</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\Task4Console\Task4Console.csproj">
+            <Project>{a9883958-79a4-46b1-be28-5b9681fd5ac1}</Project>
+            <Name>Task4Console</Name>
+        </ProjectReference>
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-         Other similar extension points exist, see Microsoft.Common.targets.
-    <Target Name="BeforeBuild">
-    </Target>
-    <Target Name="AfterBuild">
-    </Target>
-    -->
-
+           Other similar extension points exist, see Microsoft.Common.targets.
+      <Target Name="BeforeBuild">
+      </Target>
+      <Target Name="AfterBuild">
+      </Target>
+      -->
 </Project>

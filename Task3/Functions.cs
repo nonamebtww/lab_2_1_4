@@ -8,18 +8,18 @@ public class Functions {
     if (arr.Length == 0) {
       return 0;
     }
-    
+
     var rows = arr.GetLength(0);
     var columns = arr.GetLength(1);
 
     if (rows == 1 || columns == 1) {
       return arr[0, 0];
     }
-    
+
     double result = 1;
     var max_length = Math.Min(rows, columns);
-    
-    for (int i = 0; i < max_length; i++) {
+
+    for (var i = 0; i < max_length; i++) {
       result *= arr[i, i];
     }
 

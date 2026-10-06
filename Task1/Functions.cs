@@ -8,31 +8,39 @@ public static class Functions {
     if (n == 0) {
       throw new ArgumentException("n cannot be 0", nameof(n));
     }
-    
-    return (Math.Pow(-1, k) * Math.Sqrt(n)) / (2 + Math.Pow(n, 2));
+
+    return Math.Pow(-1, k) * Math.Sqrt(n) / (2 + Math.Pow(n, 2));
   }
-  
+
   public static double[] Create1DArray(int n) {
+    if (n <= 0) {
+      throw new ArgumentException();
+    }
+
     var result = new double[n];
     var random = new Random();
 
-    for (int i = 0; i < n; i++) {
+    for (var i = 0; i < n; i++) {
       result[i] = Formula(i + 1, random.Next(1, 10));
     }
-    
+
     return result;
   }
 
   public static double[,] Create2DArray(int n, int m) {
+    if (n <= 0 || m <= 0) {
+      throw new ArgumentException();
+    }
+
     var result = new double[n, m];
     var random = new Random();
 
-    for (int i = 0; i < n; i++) {
-      for (int j = 0; j < m; j++) {
+    for (var i = 0; i < n; i++) {
+      for (var j = 0; j < m; j++) {
         result[i, j] = Formula(i + 1, random.Next(1, 10));
       }
     }
-    
+
     return result;
   }
 }

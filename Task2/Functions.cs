@@ -9,7 +9,7 @@ public class Functions {
     var count_1 = 0;
     var count_2 = 0;
     var max_length = Math.Max(arr_1.Length, arr_2.Length);
-    
+
     for (var i = 0; i < max_length; i++) {
       if (i < arr_1.Length && arr_1[i] % 2 == 0) {
         count_1++;
